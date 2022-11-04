@@ -1,21 +1,18 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-        stage('Build') {
-            steps {
-                echo 'Hello build'
-            }
-        }
-        stage('test') {
-            steps {
-                echo 'Hello tester'
-            }
-        }
-    }
+    node {
+  stage('Build') {
+    echo "building"
+  }
+  stage('Deploy to testing') {
+    echo "deployed"
+  }
+  stage('QA Team certification') {
+    input "Deploy to prod?"
+  }
+  stage('Deploy to prod') {
+    echo "deployed"
+  }
+}
 }
