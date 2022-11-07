@@ -33,4 +33,4 @@ _main/* ubuntu@65.2.122.90:/home/ubuntu/main/ "
             }
         }
     }   
-}
+} 
