@@ -7,8 +7,7 @@ pipeline {
                 branch 'Dev-1'
             }
             steps {
-                sh  "scp -r -i   /var/lib/jenkins/.ssh/id_rsa  /var/lib/jenkins/workspace/multi branch-brij
-_Dev-1/* ubuntu@65.2.122.90:/home/ubuntu/dev/ "
+                sh  "scp -r -i   /var/lib/jenkins/.ssh/id_rsa  /var/lib/jenkins/workspace/multi branch-brij_Dev-1/* ubuntu@65.2.122.90:/home/ubuntu/dev/ "
             }
         }
 
@@ -17,8 +16,7 @@ _Dev-1/* ubuntu@65.2.122.90:/home/ubuntu/dev/ "
                 branch 'main'
             }
             steps {
-                sh  "scp -r -i   /var/lib/jenkins/.ssh/id_rsa  /var/lib/jenkins/workspace/multi branch-brij
-_main/* ubuntu@65.2.122.90:/home/ubuntu/main/ "
+                sh  "scp -r -i   /var/lib/jenkins/.ssh/id_rsa  /var/lib/jenkins/workspace/multi branch-brij_main/* ubuntu@65.2.122.90:/home/ubuntu/main/ "
             }
         }
     }   
