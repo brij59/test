@@ -2,17 +2,6 @@ pipeline {
     agent any
     stages {
 
-        stage('Deployment step') {
-
-            steps {
-                timeout(time: 15, unit: "MINUTES") {
-                    input message: 'Do you want to approve the deployment?', ok: 'Yes'
-                }
-
-                echo "Initiating deployment"
-            }
-        }
-
         stage('deploy to remote dev server') {
             when {
                 branch 'Dev-1'
@@ -33,4 +22,4 @@ _main/* ubuntu@65.2.122.90:/home/ubuntu/main/ "
             }
         }
     }   
-} 
+}
