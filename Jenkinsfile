@@ -15,7 +15,7 @@ pipeline {
 
         stage('deploy to remote dev server') {
             when {
-                branch 'dev'
+                branch 'Dev-1'
             }
             steps {
                 sh  "scp -r -i   /var/lib/jenkins/.ssh/id_rsa  /var/lib/jenkins/workspace/multi branch-brij
