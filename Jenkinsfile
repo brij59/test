@@ -7,7 +7,7 @@ pipeline {
                 branch 'Dev-1'
             }
             steps {
-                sh  "scp -r -i   /home/ubuntu /var/lib/jenkins/workspace/brij_multi_Dev-1/* ubuntu@65.2.146.212:/home/ubuntu/dev/ "
+                sh  "scp -r -i   /home/ubuntu/brijraj.pem /var/lib/jenkins/workspace/brij_multi_Dev-1/* ubuntu@13.232.149.127:/home/ubuntu/dev1/ "
             }
         }
 
@@ -16,10 +16,9 @@ pipeline {
                 branch 'main'
             }
             steps {
-                sh  "scp -r -i   /home/ubuntu  /var/lib/jenkins/workspace/brij_multi_main/* ubuntu@65.2.146.212:/home/ubuntu/main/ "
+                sh  "scp -r -i   /home/ubuntu/brijraj.pem  /var/lib/jenkins/workspace/brij_multi_main/* ubuntu@13.232.149.127:/home/ubuntu/main1/ "
             }
         }
     }   
 }
  
-  
